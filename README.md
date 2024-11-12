@@ -95,7 +95,7 @@ Zaimplementuj klasę `Rectangle` zgodnie z powyższymi wymaganiami.
 Rozwiązanie umieść w pliku `rectangle.cpp`.
 
 ## Test
-Aby uruchomić testy w termnalu wykonaj:
+Aby uruchomić testy jednostkowe, wykonaj komendę w termnalu:
 ```bash
 make clean test
 ```
