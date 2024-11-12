@@ -92,3 +92,4 @@ int main() {
 ```
 
 Zaimplementuj klasę `Rectangle` zgodnie z powyższymi wymaganiami.
+Rozwiązanie umieść w pliku `rectangle.cpp`.
