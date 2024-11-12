@@ -97,5 +97,5 @@ Rozwiązanie umieść w pliku `rectangle.cpp`.
 ## Test
 Aby uruchomić testy jednostkowe, wykonaj komendę w termnalu:
 ```bash
-make clean test
+make test
 ```
