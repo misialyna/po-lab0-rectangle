@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
-#include "catch.hpp"
+#include "catch_amalgamated.hpp"
 #include "rectangle.cpp"
 
 TEST_CASE("Rectangle constructor initializes width and height", "[constructor]") {

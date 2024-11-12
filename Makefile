@@ -1,10 +1,11 @@
-all: a.out
+all: clean test
 
-a.out:
-	g++ -std=c++11 rectangle.cpp test.cpp
+appTests: test.cpp rectangle.cpp
+	g++ -Wall --std=c++17 test.cpp catch_amalgamated.cpp -o appTests
 
-test: a.out
-	./a.out
+test: appTests
+	# executes all tests
+	./appTests
 
 clean:
-	rm a.out
+	rm -f appTests
