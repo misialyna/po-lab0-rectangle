@@ -93,3 +93,9 @@ int main() {
 
 Zaimplementuj klasę `Rectangle` zgodnie z powyższymi wymaganiami.
 Rozwiązanie umieść w pliku `rectangle.cpp`.
+
+## Test
+Aby uruchomić testy jednostkowe, wykonaj komendę w termnalu:
+```bash
+make test
+```
