@@ -1,8 +1,11 @@
-all: test
+all: clean test
 
-test: test.cpp rectangle.cpp catch_amalgamated.cpp
-	$(CXX) -std=c++17 -Wall -o test test.cpp rectangle.cpp catch_amalgamated.cpp
-	./test
+appTests: test.cpp rectangle.cpp
+	g++ -Wall --std=c++17 test.cpp catch_amalgamated.cpp -o appTests
+
+test: appTests
+	# executes all tests
+	./appTests
 
 clean:
-	rm -f test
+	rm -f appTests
