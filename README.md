@@ -98,4 +98,5 @@ Rozwiązanie umieść w pliku `rectangle.cpp`.
 Aby uruchomić testy jednostkowe, wykonaj komendę w termnalu:
 ```bash
 make test
+make test_rectangle_smoke
 ```
