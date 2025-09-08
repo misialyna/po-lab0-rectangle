@@ -1,19 +1,8 @@
-CXX = g++
-CXXFLAGS = -Wall --std=c++17
+all: test
 
-all: clean test
-
-appTests: test.cpp rectangle.cpp catch_amalgamated.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $^
-
-test: appTests
-	# executes all tests
-	./appTests
-
-# smoke test – sprawdza prosty przypadek
-test_rectangle_smoke: test_rectangle_smoke.cpp rectangle.cpp catch_amalgamated.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $^
-	./$@
+test: test.cpp rectangle.cpp catch_amalgamated.cpp
+	$(CXX) -std=c++17 -Wall -o test test.cpp rectangle.cpp catch_amalgamated.cpp
+	./test
 
 clean:
-	rm -f appTests test_rectangle_smoke
+	rm -f test
