@@ -44,3 +44,22 @@ TEST_CASE("Rectangle display method does not throw an exception", "[display]") {
     Rectangle rect(10.0, 5.0);
     REQUIRE_NOTHROW(rect.display());
 }
+
+TEST_CASE("Rectangle display prints expected structure and values", "[display][io]") {
+    Rectangle rect(3.5, 2.0);
+
+    std::ostringstream oss;
+    auto* old_buf = std::cout.rdbuf(oss.rdbuf()); // przekierowanie cout
+    rect.display();
+    std::cout.rdbuf(old_buf); // przywróć
+
+    const std::string out = oss.str();
+
+    REQUIRE(out.find("Rectangle: 3.5 x 2") != std::string::npos);
+    REQUIRE(out.find("Area: ") != std::string::npos);
+    REQUIRE(out.find("Perimeter: ") != std::string::npos);
+
+    REQUIRE(out.find("Area: 7") != std::string::npos);
+    REQUIRE(out.find("Perimeter: 11") != std::string::npos);
+}
+
